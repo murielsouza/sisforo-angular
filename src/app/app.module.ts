@@ -5,11 +5,13 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 import { AppComponent } from './app.component';
+import { BemComponent } from './bem/bem.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BemComponent
   ],
     imports: [
         NgbModule.forRoot(),
