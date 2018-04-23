@@ -22,12 +22,15 @@ export class BemComponent implements OnInit {
             new TipoDeBem(2, 'Monitor'),
             new TipoDeBem(3, 'Impressora')];
 
-  marcas = [ new MarcaDoBem(0, 'Positivo'),
-             new MarcaDoBem(1, 'Samsung'),
-             new MarcaDoBem(2, 'Itautec')];
+  marcas = [ new MarcaDoBem(0, 'Positivo', '../../assets/logo_positivo.png'),
+             new MarcaDoBem(1, 'Samsung', '../../assets/logo_samsung.png'),
+             new MarcaDoBem(2, 'Itautec', '../../assets/logo_itautec.png'),
+             new MarcaDoBem(3, 'Lenovo', '../../assets/logo_lenovo.png')];
+
 
   bens = [ new Bem(0, 0, 'POSITIVO D570', 'D570', 'Microcomputador desktop c/ gerenciamento remoto')]
-  constructor() { }
+  constructor() {
+  }
 
   salvar(){
       const b = new Bem(this.tipo, this.marca, this.nome, this.modelo, this.descricao);

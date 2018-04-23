@@ -15,13 +15,15 @@
     <tr>
       <th>Nome</th>
       <th>Marca</th>
+      <th>Modelo</th>
       <th>Descrição</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor= "let bem of bens">
       <td>{{bem.nome}} </td>
-      <td>{{marcas[bem.marca].nome}}</td>
+      <td align="center"> <img class="logoMarcas" ngSrc="{{marcas[bem.marca].logo}}"></td>
+      <td>{{bem.modelo}}</td>
       <td>{{bem.descricao}}</td>
     </tr>
     </tbody>
@@ -42,7 +44,7 @@
       <div>
         <label for="tipo">Marca do Bem</label><br>
         <select id="marca" name="marca" required class="form-control" [(ngModel)]="marca">
-          <option *ngFor="let m of marcas" [value]="m.id"> {{m.nome}} </option>
+          <option *ngFor="let m of marcas" [value]="m.id">{{m.nome}}</option>
         </select>
       </div>
 
